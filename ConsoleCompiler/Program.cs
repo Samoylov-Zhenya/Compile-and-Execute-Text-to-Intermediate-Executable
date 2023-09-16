@@ -24,6 +24,12 @@ namespace ConsoleCompiler
                 }
             }";
 
+            string sourceCode2 =
+           @" 
+                string csharpVersion = System.Environment.Version.ToString();
+                System.Console.WriteLine(""csharpVersion: "" + csharpVersion);
+            ";
+
             Console.WriteLine("log start Program.Main");
             SyntaxTree syntaxTree = CSharpSyntaxTree.ParseText(sourceCode);
 
